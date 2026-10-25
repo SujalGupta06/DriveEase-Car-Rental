@@ -1,0 +1,166 @@
+.footer {
+  background: #191c1e;
+  color: white;
+  padding: 70px 24px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 50px;
+
+  padding-bottom: 60px;
+}
+
+/* Brand */
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+  text-decoration: none;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.footer-logo-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #004ac6;
+  border-radius: 9px;
+
+  font-size: 18px;
+}
+
+.footer-brand > p {
+  max-width: 320px;
+
+  margin: 20px 0;
+
+  color: #aeb4bb;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials a {
+  color: #aeb4bb;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer-socials a:hover {
+  color: white;
+}
+
+/* Columns */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.footer-column h3 {
+  margin: 0 0 8px;
+
+  color: white;
+  font-size: 14px;
+}
+
+.footer-column a,
+.footer-column p {
+  margin: 0;
+
+  color: #aeb4bb;
+  text-decoration: none;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+/* Bottom */
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: auto;
+
+  padding: 22px 0;
+
+  border-top: 1px solid #34383c;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #8f969d;
+  font-size: 12px;
+}
+
+.footer-bottom div {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom a {
+  color: #8f969d;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer-bottom a:hover {
+  color: white;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 50px 20px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-bottom div {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

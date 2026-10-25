@@ -1,0 +1,210 @@
+.featured-section {
+  padding: 100px 24px;
+  background: #f7f9fb;
+}
+
+.featured-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.featured-label {
+  color: #004ac6;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.featured-header h2 {
+  margin: 12px 0 10px;
+  font-size: 38px;
+  color: #191c1e;
+}
+
+.featured-header p {
+  margin: 0;
+  color: #6b7280;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.view-all-link {
+  color: #004ac6;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Grid */
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+
+.featured-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+
+  border: 1px solid #e7eaee;
+
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.featured-image-wrapper {
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.3s;
+}
+
+.featured-card:hover .featured-image {
+  transform: scale(1.04);
+}
+
+.category-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  background: white;
+  color: #004ac6;
+
+  padding: 6px 10px;
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Content */
+
+.featured-card-content {
+  padding: 20px;
+}
+
+.rating {
+  color: #e09b00;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.featured-card h3 {
+  margin: 8px 0 5px;
+
+  color: #191c1e;
+  font-size: 20px;
+}
+
+.car-description {
+  margin: 0;
+  color: #7b8188;
+  font-size: 12px;
+}
+
+.car-specs {
+  display: flex;
+  gap: 15px;
+
+  margin: 18px 0;
+
+  color: #626971;
+  font-size: 12px;
+}
+
+.featured-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 15px;
+  border-top: 1px solid #edf0f2;
+}
+
+.price {
+  color: #191c1e;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.per-day {
+  color: #7b8188;
+  font-size: 11px;
+}
+
+.details-link {
+  color: #004ac6;
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.details-link:hover {
+  text-decoration: underline;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .featured-section {
+    padding: 70px 16px;
+  }
+
+  .featured-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .featured-header h2 {
+    font-size: 30px;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-image-wrapper {
+    height: 220px;
+  }
+}

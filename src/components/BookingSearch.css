@@ -1,0 +1,214 @@
+.booking-search-section {
+  position: relative;
+  z-index: 5;
+  margin-top: -35px;
+  padding: 0 24px;
+}
+
+.booking-search {
+  max-width: 1160px;
+  margin: auto;
+
+  padding: 28px;
+
+  background: #ffffff;
+  border-radius: 18px;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Fleet */
+
+.fleet-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #e8ebef;
+}
+
+.fleet-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 180px;
+}
+
+.fleet-title span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #191c1e;
+  letter-spacing: 1px;
+}
+
+.fleet-title small {
+  color: #7b8188;
+  font-size: 12px;
+}
+
+.fleet-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fleet-pill {
+  border: 1px solid #e1e5ea;
+
+  background: white;
+  color: #555b63;
+
+  padding: 9px 16px;
+  border-radius: 999px;
+
+  font-size: 13px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.fleet-pill:hover {
+  border-color: #004ac6;
+  color: #004ac6;
+}
+
+.fleet-pill.active {
+  background: #004ac6;
+  border-color: #004ac6;
+  color: white;
+}
+
+/* Search fields */
+
+.search-fields {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    1fr
+    1fr
+    auto;
+
+  gap: 14px;
+
+  padding-top: 24px;
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.search-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555b63;
+}
+
+.search-field select,
+.search-field input {
+  width: 100%;
+  box-sizing: border-box;
+
+  height: 46px;
+
+  padding: 0 12px;
+
+  border: 1px solid #dfe3e8;
+  border-radius: 9px;
+
+  background: #f9fafb;
+
+  color: #191c1e;
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+}
+
+.search-field select:focus,
+.search-field input:focus {
+  border-color: #004ac6;
+  background: white;
+}
+
+/* Search Button */
+
+.search-button {
+  align-self: end;
+
+  height: 46px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #004ac6;
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.search-button:hover {
+  background: #003a9d;
+}
+
+.search-button span {
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+  .search-fields {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .booking-search-section {
+    margin-top: -20px;
+    padding: 0 16px;
+  }
+
+  .booking-search {
+    padding: 20px;
+  }
+
+  .fleet-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .fleet-pills {
+    width: 100%;
+  }
+
+  .fleet-pill {
+    flex: 1;
+  }
+
+  .search-fields {
+    grid-template-columns: 1fr;
+  }
+}

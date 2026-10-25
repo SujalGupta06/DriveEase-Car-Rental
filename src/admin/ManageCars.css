@@ -1,0 +1,701 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap");
+
+/* ========================================
+   DRIVE EASE — MANAGE CARS
+   Stitch-inspired Fleet Management UI
+======================================== */
+
+.manage-cars-page {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f7f9fb;
+  color: #191c1e;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.manage-cars-page *,
+.manage-cars-page *::before,
+.manage-cars-page *::after {
+  box-sizing: border-box;
+}
+
+.manage-cars-page button,
+.manage-cars-page input,
+.manage-cars-page select {
+  font: inherit;
+}
+
+.manage-cars-page button {
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manage-cars-page button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.manage-cars-page .material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.manage-cars-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 8px 0 28px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid #e4e8ef;
+}
+
+.manage-cars-eyebrow {
+  margin: 0 0 9px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.manage-cars-header h1 {
+  margin: 0;
+  color: #191c1e;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.8px;
+}
+
+.manage-cars-subtitle {
+  margin: 8px 0 0;
+  color: #656d7d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.manage-cars-header-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Refresh */
+
+.manage-refresh-button {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 15px;
+  color: #30394b;
+  background: #ffffff;
+  border: 1px solid #dce2eb;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.manage-refresh-button:hover {
+  background: #f0f3f8;
+}
+
+/* Add New Vehicle */
+
+.manage-add-button {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 18px;
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.16);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.manage-add-button:hover {
+  background: #1d4ed8;
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.22);
+}
+
+.manage-add-button .material-symbols-outlined {
+  font-size: 19px;
+}
+
+/* ========================================
+   STATUS ALERTS
+======================================== */
+
+.manage-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.manage-alert > span:nth-child(2) {
+  flex: 1;
+}
+
+.manage-alert-error {
+  color: #b42318;
+  background: #fff1f0;
+  border-color: #ffd5d2;
+}
+
+.manage-alert-success {
+  color: #18794e;
+  background: #eaf8f0;
+  border-color: #b7ebca;
+}
+
+.manage-alert button {
+  color: inherit;
+  background: transparent;
+  border: 0;
+  font-weight: 600;
+}
+
+/* ========================================
+   KPI CARDS
+======================================== */
+
+.manage-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.manage-stat-card {
+  min-height: 118px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 12px;
+  box-shadow: 0 2px 7px rgba(25, 28, 30, 0.025);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.manage-stat-card:hover {
+  box-shadow: 0 7px 20px rgba(25, 28, 30, 0.06);
+  transform: translateY(-1px);
+}
+
+.manage-stat-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.manage-stat-icon.blue {
+  color: #2563eb;
+  background: #e9efff;
+}
+
+.manage-stat-icon.green {
+  color: #15803d;
+  background: #e5f6ed;
+}
+
+.manage-stat-icon.orange {
+  color: #c26a09;
+  background: #fff0dc;
+}
+
+.manage-stat-icon .material-symbols-outlined {
+  font-size: 25px;
+}
+
+.manage-stat-card p {
+  margin: 0 0 7px;
+  color: #626c7e;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.manage-stat-card h2 {
+  margin: 0;
+  color: #191c1e;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* ========================================
+   INVENTORY CONTAINER
+======================================== */
+
+.manage-table-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2e7ef;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(25, 28, 30, 0.025);
+}
+
+.manage-table-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8edf4;
+}
+
+.manage-table-toolbar h2 {
+  margin: 0;
+  color: #191c1e;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.manage-table-toolbar p {
+  margin: 6px 0 0;
+  color: #697386;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Search */
+
+.manage-search {
+  width: min(340px, 100%);
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  color: #687386;
+  background: #f2f4f6;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.manage-search:focus-within {
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.manage-search > .material-symbols-outlined {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.manage-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 0;
+  color: #191c1e;
+  background: transparent;
+  border: 0;
+  outline: none;
+  font-size: 12px;
+}
+
+.manage-search input::placeholder {
+  color: #717b8c;
+}
+
+/* ========================================
+   VEHICLE TABLE
+======================================== */
+
+.manage-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.manage-cars-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.manage-cars-table thead {
+  background: #f7f9fb;
+}
+
+.manage-cars-table th {
+  padding: 15px 18px;
+  color: #656f82;
+  border-bottom: 1px solid #e5e9f0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+}
+
+.manage-cars-table td {
+  padding: 17px 18px;
+  color: #333d4f;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.manage-cars-table tbody tr {
+  transition: background 0.18s ease;
+}
+
+.manage-cars-table tbody tr:hover {
+  background: #f8faff;
+}
+
+.manage-cars-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Vehicle image and information */
+
+.manage-vehicle-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 230px;
+}
+
+.manage-car-image {
+  width: 76px;
+  height: 54px;
+  flex-shrink: 0;
+  object-fit: cover;
+  background: #e9edf3;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(25, 28, 30, 0.08);
+}
+
+.manage-vehicle-cell > div,
+.manage-fuel-cell {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.manage-vehicle-cell strong {
+  color: #202b3d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.manage-vehicle-cell span,
+.manage-fuel-cell span {
+  color: #596579;
+  font-size: 11px;
+}
+
+.manage-vehicle-cell small,
+.manage-fuel-cell small {
+  color: #7d8899;
+  font-size: 10px;
+}
+
+/* Category */
+
+.manage-category {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 9px;
+  color: #445574;
+  background: #edf2fb;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Pricing */
+
+.manage-price {
+  color: #202b3d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.manage-per-day {
+  margin-left: 4px;
+  color: #717c8d;
+  font-size: 10px;
+}
+
+/* Availability status */
+
+.manage-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.manage-status.available {
+  color: #167747;
+  background: #e8f7ee;
+}
+
+.manage-status.unavailable {
+  color: #b93830;
+  background: #fff0ed;
+}
+
+.manage-status-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+/* ========================================
+   EDIT AND DELETE BUTTONS
+======================================== */
+
+.manage-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.manage-edit-button,
+.manage-delete-button {
+  min-height: 33px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 9px;
+  border: 1px solid;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.manage-edit-button {
+  color: #2563eb;
+  background: #eff5ff;
+  border-color: #d9e6ff;
+}
+
+.manage-edit-button:hover {
+  background: #dfeaff;
+  border-color: #b9d0ff;
+}
+
+.manage-delete-button {
+  color: #c03935;
+  background: #fff5f4;
+  border-color: #ffdfdc;
+}
+
+.manage-delete-button:hover {
+  background: #ffe8e5;
+  border-color: #ffc9c3;
+}
+
+.manage-edit-button .material-symbols-outlined,
+.manage-delete-button .material-symbols-outlined {
+  font-size: 16px;
+}
+
+/* ========================================
+   EMPTY, LOADING AND ERROR STATES
+======================================== */
+
+.manage-state {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 30px;
+  color: #687386;
+  text-align: center;
+}
+
+.manage-state > .material-symbols-outlined {
+  color: #8794a8;
+  font-size: 38px;
+}
+
+.manage-state p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.manage-state button {
+  padding: 10px 15px;
+  color: #ffffff;
+  background: #2563eb;
+  border: 0;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.manage-state button:hover {
+  background: #1d4ed8;
+}
+
+.manage-spinner {
+  animation: manage-spin 1s linear infinite;
+}
+
+@keyframes manage-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   TABLE FOOTER
+======================================== */
+
+.manage-table-footer {
+  padding: 15px 24px;
+  color: #687386;
+  background: #ffffff;
+  border-top: 1px solid #e8edf4;
+  font-size: 11px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+  .manage-cars-page {
+    padding: 26px 22px;
+  }
+
+  .manage-cars-header h1 {
+    font-size: 28px;
+  }
+
+  .manage-stats {
+    gap: 12px;
+  }
+
+  .manage-stat-card {
+    gap: 12px;
+    padding: 17px;
+  }
+
+  .manage-table-toolbar {
+    padding: 20px;
+  }
+
+  .manage-cars-table th,
+  .manage-cars-table td {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}
+
+@media (max-width: 760px) {
+  .manage-cars-page {
+    padding: 20px 14px;
+  }
+
+  .manage-cars-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .manage-cars-header-actions {
+    width: 100%;
+  }
+
+  .manage-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .manage-stat-card {
+    min-height: 90px;
+  }
+
+  .manage-table-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .manage-search {
+    width: 100%;
+  }
+
+  .manage-table-footer {
+    padding: 14px 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .manage-cars-header h1 {
+    font-size: 25px;
+  }
+
+  .manage-cars-header-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .manage-refresh-button,
+  .manage-add-button {
+    width: 100%;
+  }
+
+  .manage-row-actions {
+    gap: 5px;
+  }
+
+  .manage-edit-button,
+  .manage-delete-button {
+    padding: 0 7px;
+  }
+}

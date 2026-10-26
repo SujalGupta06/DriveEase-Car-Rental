@@ -298,13 +298,26 @@ function Booking() {
     setSubmitting(true);
 
     try {
+      const pickup = new Date(formData.pickupDate);
+      const returnDate = new Date(formData.returnDate);
+
+      const totalDays = Math.ceil(
+        (returnDate.getTime() - pickup.getTime()) /
+          (1000 * 60 * 60 * 24)
+      );
+
+      const totalAmount = totalDays * Number(car.pricePerDay);
+
       const bookingData = {
         car: car._id,
         pickupLocation: formData.pickupLocation.trim(),
         returnLocation: formData.returnLocation.trim(),
         pickupDate: formData.pickupDate,
         returnDate: formData.returnDate,
+        totalDays,
+        totalAmount,
       };
+
 
       const response = await fetch(`${API_URL}/bookings`, {
         method: "POST",

@@ -37,7 +37,7 @@ const AddEditCar = () => {
         setError("");
 
         const response = await fetch(
-          "http://localhost:5000/api/cars"
+          "https://driveease-api-4zbo.onrender.com/api/cars"
         );
 
         const data = await response.json();
@@ -124,8 +124,8 @@ const AddEditCar = () => {
       }
 
       const url = isEditMode
-        ? `http://localhost:5000/api/cars/${id}`
-        : "http://localhost:5000/api/cars";
+        ? `https://driveease-api-4zbo.onrender.com/api/cars/${id}`
+        : "https://driveease-api-4zbo.onrender.com/api/cars";
 
       const method = isEditMode ? "PUT" : "POST";
 

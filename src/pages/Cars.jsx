@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Cars.css";
 
-const API_URL = "http://localhost:5000/api/cars";
+const API_URL = "https://driveease-api-4zbo.onrender.com/api/cars";
 
 function Cars() {
   const [cars, setCars] = useState([]);

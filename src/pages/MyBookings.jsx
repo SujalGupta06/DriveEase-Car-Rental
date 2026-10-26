@@ -19,7 +19,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./MyBookings.css";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://driveease-api-4zbo.onrender.com/api";
 
 const FILTERS = [
   "All",

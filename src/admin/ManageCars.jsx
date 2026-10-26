@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ManageCars.css";
 
-const API_URL = "http://localhost:5000/api/cars";
+const API_URL = "https://driveease-api-4zbo.onrender.com/api/cars";
 
 const ManageCars = () => {
   const navigate = useNavigate();

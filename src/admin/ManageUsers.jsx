@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import "./ManageUsers.css";
 
-const API_URL = "http://localhost:5000/api/users/admin/users";
+const API_URL = "https://driveease-api-4zbo.onrender.com/api/users/admin/users";
 
 function ManageUsers() {
   const [users, setUsers] = useState([]);

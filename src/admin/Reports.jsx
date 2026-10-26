@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Reports.css";
 
-const API_URL = "http://localhost:5000/api/admin/reports";
+const API_URL = "https://driveease-api-4zbo.onrender.com/api/admin/reports";
 
 const months = [
   "Jan", "Feb", "Mar", "Apr", "May", "Jun",

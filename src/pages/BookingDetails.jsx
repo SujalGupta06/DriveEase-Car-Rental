@@ -48,7 +48,7 @@ function BookingDetails() {
       setError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/bookings/${id}`,
+        `https://driveease-api-4zbo.onrender.com/api/bookings/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -150,7 +150,7 @@ function BookingDetails() {
       setSuccessMessage("");
 
       const response = await fetch(
-        `http://localhost:5000/api/bookings/${id}/cancel`,
+        `https://driveease-api-4zbo.onrender.com/api/bookings/${id}/cancel`,
         {
           method: "PUT",
           headers: {

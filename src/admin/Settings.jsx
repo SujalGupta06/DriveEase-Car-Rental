@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import "./Settings.css";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://driveease-api-4zbo.onrender.com/api";
 
 const DEFAULT_PREFERENCES = {
   emailNotifications: true,

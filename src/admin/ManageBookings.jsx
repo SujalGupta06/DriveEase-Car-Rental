@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import "./ManageBookings.css";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://driveease-api-4zbo.onrender.com/api";
 
 const BOOKING_STATUSES = [
   "Pending",

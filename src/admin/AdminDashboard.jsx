@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./AdminDashboard.css";
 
-const API_URL = "http://localhost:5000/api/admin/dashboard";
+const API_URL = "https://driveease-api-4zbo.onrender.com/api/admin/dashboard";
 
 function AdminDashboard() {
   const [dashboard, setDashboard] = useState(null);

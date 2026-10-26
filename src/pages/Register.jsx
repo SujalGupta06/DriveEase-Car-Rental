@@ -135,7 +135,7 @@ function Register() {
       setIsLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        "https://driveease-api-4zbo.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {

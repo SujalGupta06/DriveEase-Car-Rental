@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./CarDetails.css";
 
-const API_URL = "http://localhost:5000/api/cars";
+const API_URL = "https://driveease-api-4zbo.onrender.com/api/cars";
 
 function CarDetails() {
   const { id } = useParams();
